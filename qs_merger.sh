@@ -26,7 +26,7 @@ fi
 
 # Format the part file
 lines=`sed 's/[{"}]//g' $PARTFILE |tr ',' '\n'|awk '{print $1"="$2}'`
-# Gets each lines featurename and has then matches the has in the model file
+# Gets each lines featurename and hash then matches hash in the model file to get QS score
 for feature in $lines
 do
 	hash=`echo $feature | awk -F '=' '{print $2}'`
