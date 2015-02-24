@@ -35,7 +35,7 @@ do
 	qs=`grep "$hash " $MODELFILE|awk '{print $2}'`
 	if [ ! -z $qs ]
 		then
-		echo "Feature $featurename has a QS of $qs"| tee -a $TMPFILE
+		echo "Feature $featurename with hash $hash has a beta of $qs"| tee -a $TMPFILE
 		else
 		echo "WARN: Feature $featurename with hash $hash does not have a QS"| tee -a $TMPFILE
 	fi
