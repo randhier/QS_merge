@@ -37,6 +37,6 @@ do
 		then
 		echo "Feature $featurename with hash $hash has a beta of $qs"| tee -a $TMPFILE
 		else
-		echo "WARN: Feature $featurename with hash $hash does not have a QS"| tee -a $TMPFILE
+		echo "WARN: Feature $featurename with hash $hash does not have a beta"| tee -a $TMPFILE
 	fi
 done
