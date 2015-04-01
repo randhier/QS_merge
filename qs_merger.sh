@@ -32,7 +32,7 @@ do
 	hash=`echo $feature | awk -F '=' '{print $2}'`
 	featurename=`echo $feature | awk -F '=' '{print $1}'`
 	# Not a fan of having the trailing white space within the grep call but sometimes the hash matches a QS score, need something better
-	qs=`grep "$hash " $MODELFILE|awk '{print $2}'`
+	qs=`grep "^$hash " $MODELFILE|awk '{print $2}'`
 	if [ ! -z $qs ]
 		then
 		echo "Feature $featurename with hash $hash has a beta of $qs"| tee -a $TMPFILE
